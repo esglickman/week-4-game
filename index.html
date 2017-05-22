@@ -2,10 +2,11 @@
 <html lang="en-us">
 <head>
 	
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>Crystal Game</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
 </head>
 
@@ -52,10 +53,55 @@
 
 		</section>
 
+		<section class="container">
+			
+			<article class="crystals">
+				
+				<img class="crystal1" src="assets/images/crystal1.jpg">
+				<img class="crystal2" src="assets/images/crystal2.jpg">
+				<img class="crystal3" src="assets/images/crystal3.jpg">
+				<img class="crystal4" src="assets/images/crystal4.jpg">
+
+			</article>
+
+
+
+		</section>
+
+		<section class="container">
+			
+		<div id="goalBox">
+
+			<p>Your goal amount is: <br> <span id="goalAmount">0</span></p>
+
+			
+
+		</div>
+
+		<div id="scoreBox">
+
+			<p>Your total score is: <br><span id="scoreAmount">0</span></p>
+
+			
+
+		</div>
+
+		<div id="winBox">
+
+			<p>Wins: <span id="winAmount">0</span></p>
+
+			<p>Loses: <span id="loseAmount">0</span></p>
+
+		</div>
+
+		</section>
+
+
+
 	</main>
 
 
-
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 

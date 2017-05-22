@@ -32,8 +32,8 @@ body {
 }
 
 .main {
-	background-color: #666;
-	border: 2px solid #999;
+	background-color: #999;
+	border: 2px solid #666;
 	opacity: 0.8;
 	padding: 10px 20px;
 	width: 525px;
@@ -50,4 +50,36 @@ article {
 	position: relative;
 	width: 600px;
 	float: left;
+}
+
+img {
+	width: 75px;
+	height: 75px;
+}
+
+p {
+	padding: 10px;
+	position: relative;
+	margin: 0 auto;
+}
+
+#goalBox, #scoreBox {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	display: inline-block;
+	margin: 10px 20px;
+}
+
+#goalAmount, #scoreAmount {
+	text-align: center;
+}
+
+#winBox {
+	width: 150px;
+	height: 100px;
+	background-color: orange;
+	display: inline-block;
+	position: relative;
+	margin: 20px 20px;
 }
