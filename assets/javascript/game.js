@@ -1,17 +1,19 @@
 $(document).ready(function(){
 
-	var randomNumber = Math.floor((Math.random() * 150)+30);
+	
 	var goalNumber = 0;
 	var totalScore = 0;
 	
 	
 //When you click the goal box it will generate a random number
-	
-	$("#goalBox").click(function() {
-	goalNumber = $(this).val();
-	$("#goalAmount").text(randomNumber);
+	function restart(){
+		//$("#goalAmount").append(goalNumber);
+		var randomNumber = Math.floor((Math.random() * 150)+30);
+		$("#goalAmount").text(randomNumber);	
+	}
 
-	});
+	restart();
+	
 //When you click on the crystals, they will generate a number and it will go in the scoreBox
 	$(".crystals").click(function() {
 	//generates random crystal number when u click
@@ -34,7 +36,8 @@ $(document).ready(function(){
 			var loses = "";
 			$("#loseAmount").html(loses++);
 			console.log(totalScore);
-			loses++;
+			//loses++;
+			restart();
 		}
 
 
