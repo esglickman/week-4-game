@@ -13,6 +13,24 @@ $(document).ready(function(){
 	}
 
 	restart();
+
+
+	function win() {
+	
+		var wins = 0;
+		wins++;
+
+		$("#winAmount").text(wins);
+		reset();
+
+	}
+
+	function lose() {
+		var losses = 0;
+		losses++;
+		$("#loseAmount").text(losses);
+		reset;
+	}
 	
 //When you click on the crystals, they will generate a number and it will go in the scoreBox
 	$(".crystals").click(function() {
@@ -23,31 +41,41 @@ $(document).ready(function(){
 	$("#scoreAmount").text(totalScore);
 	console.log("#scoreAmount");
 
+
 	}); 
 
-	function winLose() {
-		if (totalScore == goalNumber) {
-		var wins = "";
-		$("#winAmount").html(wins);
-			wins++;
-		}
+	if (totalScore == "#goalAmount") {
+		win();
+		reset();
 
-		if (totalScore > goalNumber) {
-			var loses = "";
-			$("#loseAmount").html(loses++);
-			console.log(totalScore);
-			//loses++;
+	} else if (totalScore > "#goalAmount") { 
+		lose();
+		reset();
+	}
+
+
+		/*if ("#scoreAmount" > "#goalAmount") {
+			var loses = 0;
+			$("#loseAmount").append(loses++);
+
 			restart();
 		}
+
+		winLose();
 
 
 	};
 
-	winLose();
+	//winLose();
+
+	console.log(goalNumber);
+	console.log(totalScore);
+	console.log("#scoreAmount");
+	console.log("#goalAmount");
 
 
 			
-	//});
+	//});*/
 	
 
 });
