@@ -6,11 +6,15 @@ $(document).ready(function(){
 	var randomNumber = Math.floor((Math.random() * 150)+30);
 	
 	
-//When you click the goal box it will generate a random number
+//When you refresh the page, the goal box generates a random number
 	function restart(){
 		//$("#goalAmount").append(goalNumber);
 		randomNumber;
+		totalScore = 0;
+		$("#scoreAmount").text("0");
 		$("#goalAmount").text(randomNumber);	
+
+	
 	}
 
 	restart();
@@ -21,7 +25,7 @@ $(document).ready(function(){
 		var wins = 0;
 		wins++;
 
-		$("#winAmount").append(wins);
+		$("#winAmount").text(wins);
 		reset();
 
 	}
@@ -29,8 +33,8 @@ $(document).ready(function(){
 	function lose() {
 		var losses = 0;
 		losses++;
-		$("#loseAmount").append(losses);
-		reset;
+		$("#loseAmount").text(losses);
+		reset();
 	}
 	
 //When you click on the crystals, they will generate a number and it will go in the scoreBox
@@ -42,17 +46,18 @@ $(document).ready(function(){
 	$("#scoreAmount").text(totalScore);
 	console.log("#scoreAmount");
 
-
-	}); 
-
 	if (totalScore == randomNumber) {
+	
 		win();
-		reset();
+		restart();
 
 	} else if (totalScore > randomNumber) { 
 		lose();
-		reset();
+		restart();
 	}
+
+	}); 
+
 
 
 		/*if ("#scoreAmount" > "#goalAmount") {
