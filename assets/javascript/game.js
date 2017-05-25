@@ -11,8 +11,9 @@ $(document).ready(function(){
 		//$("#goalAmount").append(goalNumber);
 		randomNumber;
 		totalScore = 0;
-		$("#scoreAmount").text("0");
+		$("#scoreAmount").text(0);
 		$("#goalAmount").text(randomNumber);	
+
 
 	
 	}
@@ -26,15 +27,15 @@ $(document).ready(function(){
 		wins++;
 
 		$("#winAmount").text(wins);
-		reset();
+		restart();
 
 	}
 
 	function lose() {
 		var losses = 0;
 		losses++;
-		$("#loseAmount").text(losses);
-		reset();
+		$("#loseAmount").text(losses + 1);
+		restart();
 	}
 	
 //When you click on the crystals, they will generate a number and it will go in the scoreBox
@@ -49,11 +50,10 @@ $(document).ready(function(){
 	if (totalScore == randomNumber) {
 	
 		win();
-		restart();
 
 	} else if (totalScore > randomNumber) { 
 		lose();
-		restart();
+
 	}
 
 	}); 
