@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-	
+	var wins = 0;
+	var losses = 0;
 	var goalNumber = 0;
 	var totalScore = 0;
 	var randomNumber = Math.floor((Math.random() * 150)+30);
@@ -9,7 +10,7 @@ $(document).ready(function(){
 //When you refresh the page, the goal box generates a random number
 	function restart(){
 		//$("#goalAmount").append(goalNumber);
-		randomNumber;
+		randomNumber = Math.floor((Math.random() * 150)+30);
 		totalScore = 0;
 		$("#scoreAmount").text(0);
 		$("#goalAmount").text(randomNumber);	
@@ -23,7 +24,6 @@ $(document).ready(function(){
 
 	function win() {
 	
-		var wins = 0;
 		wins++;
 
 		$("#winAmount").text(wins);
@@ -32,9 +32,9 @@ $(document).ready(function(){
 	}
 
 	function lose() {
-		var losses = 0;
+		
 		losses++;
-		$("#loseAmount").text(losses + 1);
+		$("#loseAmount").text(losses);
 		restart();
 	}
 	
